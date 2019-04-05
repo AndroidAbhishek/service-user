@@ -1,0 +1,52 @@
+{
+    "name": "DoctorAccount",
+    "fields": [
+        {
+            "fieldName": "accoundId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "licenseNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "experience",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "speciality",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "qualification",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "userAccount",
+            "otherEntityRelationshipName": "doctorAccount",
+            "relationshipName": "users"
+        }
+    ],
+    "changelogDate": "20190405044152",
+    "entityTableName": "doctor_account",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "user",
+    "applications": "*",
+    "microserviceName": "user"
+}

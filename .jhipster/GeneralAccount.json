@@ -1,0 +1,35 @@
+{
+    "name": "GeneralAccount",
+    "fields": [
+        {
+            "fieldName": "accountId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "personalInfo",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "userAccount",
+            "otherEntityRelationshipName": "generalAccount",
+            "javadoc": "A relationship",
+            "relationshipName": "users"
+        }
+    ],
+    "changelogDate": "20190405044153",
+    "entityTableName": "general_account",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "user",
+    "applications": "*",
+    "microserviceName": "user"
+}
