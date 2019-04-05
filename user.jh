@@ -1,0 +1,51 @@
+entity User {
+	userId Long required,
+	name String required,
+	email String required,
+	phoneNumber String,
+    profilepicUrl String,
+    dob String required,
+    gender Gender,
+    role Role
+}
+
+entity Doctor {
+	accoundId Long required,
+	licenseNumber String required,
+	experience String,
+	speciality String required,
+	qualification String
+}
+
+entity General {
+	accountId Long required,
+	personalInfo String
+}
+
+enum Gender{
+MALE, FEMALE, DO_NOT_WANT_TO_SPECIFY
+}
+
+enum Role{
+Doctor, GENERAL_USER
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Doctor{users} to User,
+	/**
+	* A relationship
+	*/
+	General{users} to User
+}
+
+// Set pagination options
+paginate Doctor, General with pagination
+
+// Use Data Transfert Objects (DTO)
+dto Doctor, General with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+microservice all with user
