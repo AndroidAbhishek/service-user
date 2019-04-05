@@ -1,0 +1,45 @@
+{
+  "generator-jhipster": {
+    "applicationType": "microservice",
+    "gitCompany": "",
+    "baseName": "user",
+    "packageName": "com.welzuka.user.user",
+    "packageFolder": "com/welzuka/user/user",
+    "serverPort": 8081,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "enableSwaggerCodegen": "true",
+    "messageBroker": "kafka",
+    "buildTool": "gradle",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "cucumber"
+    ],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.8.2",
+    "jwtSecretKey": "MjE3ODFkZmE2NzdkNzJiNGQ1OGRlODkxNGVmMzQ3Mjc1ZDA2YmZiNTJkMmU3YWM4NDgzY2NlMWZjZjAzNjBlNjVhNzljMDc0ZGU4MDUwNTk2MjBhNGM0NjY1YzE0YTczYmQ2Nzk2ODMxMWVlZGJjZTg1YjgwMDk1YzU5NWRmZjg=",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  },
+  "git-provider": "GitHub",
+  "git-company": "AndroidAbhishek",
+  "repository-name": "service-user"
+}
